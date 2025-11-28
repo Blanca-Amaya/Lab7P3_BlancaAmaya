@@ -127,7 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Imagen.cpp" />
+    <ClCompile Include="ImagenColor.cpp" />
+    <ClCompile Include="ImagenEscalaGrises.cpp" />
     <ClCompile Include="Lab7P3_BlancaAmaya.cpp" />
+    <ClCompile Include="RGB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Imagen.h" />
+    <ClInclude Include="ImagenColor.h" />
+    <ClInclude Include="ImagenEscalaGrises.h" />
+    <ClInclude Include="RGB.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

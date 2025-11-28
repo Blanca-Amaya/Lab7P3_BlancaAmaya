@@ -1,7 +1,26 @@
 #include "Imagen.h"
 #include <iostream>
 
-Imagen::Imagen(const std::string& nombre, int ancho, int altura) : nombre(nombre), ancho(ancho), altura(altura) { 
+Imagen::Imagen(string nombre_, int ancho_, int altura_) {
+	pixeles = ancho * altura;
+	if (ancho_ < 1) {
+		ancho = 1;
+	}
+	else if (ancho_ > 10) {
+		ancho = 10;
+	}
+	else {
+		ancho = ancho_;
+	}
+	if (altura_ < 1) {
+		altura = 1;
+	}
+	else if (altura_ > 10) {
+		altura = 10;
+	}
+	else {
+		altura = altura_;
+	}
 	pixeles = ancho * altura;
 }
 
@@ -26,8 +45,8 @@ int Imagen::getPixeles() {
 
 
 void Imagen::listarAtributos() {
-	cout << "Nombre: " << nombre << endl;
-	cout << "Ancho: " << ancho << endl;
-	cout << "Altura: " << altura << endl;
-	cout << "Pixeles: " << pixeles << endl;
+	cout << "Nombre: " << nombre << "\n";
+	cout << "Ancho: " << ancho << "\n";
+	cout << "Altura: " << altura << "\n";
+	cout << "Pixeles: " << pixeles << "\n";
 }
