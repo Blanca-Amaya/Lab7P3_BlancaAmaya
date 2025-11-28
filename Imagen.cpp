@@ -29,8 +29,6 @@ int Imagen::getPixeles() {
 	return pixeles;
 }
 
-
-
 void Imagen::listarAtributos() {
 	cout << "Nombre: " << nombre << "\n";
 	cout << "Ancho: " << ancho << "\n";
