@@ -26,6 +26,6 @@ public:
     void setR(int rr);
     void setG(int gg);
     void setB(int bb);
-    void ajustar(int delta); // ajusta cada componente con saturación 0-255
+    void ajustar(int delta);
     bool operator==(const RGB& otroRgb) const;
 };

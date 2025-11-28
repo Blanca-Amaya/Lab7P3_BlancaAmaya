@@ -16,7 +16,7 @@ public:
 	~ImagenColor();
 	void calcularPropiedad();
 	void agregarRGB(RGB* rgb);
-	bool aplicarBrillo(int brillo) override;
+	virtual bool aplicarBrillo(int brillo) override;
 	void mostrarPropiedades() override;
 	void listarAtributos() override;
 

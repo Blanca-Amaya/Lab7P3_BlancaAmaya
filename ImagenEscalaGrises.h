@@ -15,9 +15,9 @@ public:
     ~ImagenEscalaGrises();
 
     // Metodos
-    bool aplicarBrillo(int brillo) override;
-    void mostrarPropiedades() override;
-    void listarAtributos() override;
+    virtual bool aplicarBrillo(int brillo) override;
+    virtual void mostrarPropiedades() override;
+    virtual void listarAtributos() override;
 
     int getContraste();
     void generarIntensidadesAleatorias();

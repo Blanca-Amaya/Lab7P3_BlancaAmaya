@@ -27,12 +27,12 @@ public:
     double promedio(vector<T>& datos) {
         if (datos.empty()) return 0.0;
         double suma = 0.0;
-        for (const auto& dato : datos) suma += static_cast<double>(dato);  // ? range-based for
-        return suma / static_cast<double>(datos.size());  // ? static_cast
+        for (const auto& dato : datos) suma += static_cast<double>(dato);
+        return suma / static_cast<double>(datos.size());
     }
 
     virtual bool aplicarBrillo(int brillo) = 0;
     virtual void mostrarPropiedades() = 0;
-    virtual void listarAtributos();
+    virtual void listarAtributos()=0;
 };
 
