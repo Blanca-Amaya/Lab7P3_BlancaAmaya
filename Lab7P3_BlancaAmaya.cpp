@@ -40,14 +40,15 @@ void crearImagenColor() {
     ImagenColor* nuevaImagen = new ImagenColor(nombre, ancho, altura, profundidad);
     for (int i = 0; i < cantidad; i++) {
         int R, G, B;
-        cout << "Color " << (i + 1) << " - R: ";
+        cout << "R: ";
         cin >> R;
-        cout << "Color " << (i + 1) << " - G: ";
+        cout << "G: ";
         cin >> G;
-        cout << "Color " << (i + 1) << " - B: ";
+        cout << "B: ";
         cin >> B;
         RGB* nuevoRGB = new RGB(R, G, B);
         nuevaImagen->agregarRGB(nuevoRGB);
+        cout << endl;
     }
     imagenes.push_back(nuevaImagen);
     cout << "Imagen a Color agregada correctamente" << endl;
@@ -142,7 +143,19 @@ void AplicarBrillo() {
 
 // 4. Mostrar Propiedades 
 void mostrarPropiedades() {
-
+    if (imagenes.empty()) {
+        cout << "No hay imagenes para mostrar propiedades" << endl;
+        return;
+    }
+    ListarImagenes();
+    int posicion;
+    cout << "Ingrese la posicion de la imagen de la que desea mostrar las propiedades: ";
+    cin >> posicion;
+    if (posicion < 0 || posicion >= imagenes.size()) {
+        cout << "Posicion invalida";
+        return;
+    }
+    imagenes[posicion]->mostrarPropiedades();
 }
 
 void menu() {
