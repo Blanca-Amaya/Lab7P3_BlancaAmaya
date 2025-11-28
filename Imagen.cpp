@@ -7,16 +7,25 @@ Imagen::Imagen(const std::string& nombre, int ancho, int altura) : nombre(nombre
 
 Imagen::~Imagen() {}
 
-int Imagen::getPixeles() const { 
-	return pixeles; 
-}
-
-
-string Imagen::getNombre() const {
+string Imagen::getNombre() {
 	return nombre;
 }
 
-void Imagen::listarAtributos() const {
+int Imagen::getAncho() {
+	return ancho;
+}
+
+int Imagen::getAltura() {
+	return altura;
+}
+
+int Imagen::getPixeles() {
+	return pixeles;
+}
+
+
+
+void Imagen::listarAtributos() {
 	cout << "Nombre: " << nombre << endl;
 	cout << "Ancho: " << ancho << endl;
 	cout << "Altura: " << altura << endl;
