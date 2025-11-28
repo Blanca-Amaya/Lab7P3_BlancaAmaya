@@ -1,19 +1,67 @@
-// Lab7P3_BlancaAmaya.cpp : Este archivo contiene la función "main". La ejecución del programa comienza y termina ahí.
-//
-
 #include <iostream>
+using namespace std;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+// Liberar Memoria
+void liberarMemoria() {
+
 }
 
-// Ejecutar programa: Ctrl + F5 o menú Depurar > Iniciar sin depurar
-// Depurar programa: F5 o menú Depurar > Iniciar depuración
+// 1. Crear Imagen
+void crearImagen() {
 
-// Sugerencias para primeros pasos: 1. Use la ventana del Explorador de soluciones para agregar y administrar archivos
-//   2. Use la ventana de Team Explorer para conectar con el control de código fuente
-//   3. Use la ventana de salida para ver la salida de compilación y otros mensajes
-//   4. Use la ventana Lista de errores para ver los errores
-//   5. Vaya a Proyecto > Agregar nuevo elemento para crear nuevos archivos de código, o a Proyecto > Agregar elemento existente para agregar archivos de código existentes al proyecto
-//   6. En el futuro, para volver a abrir este proyecto, vaya a Archivo > Abrir > Proyecto y seleccione el archivo .sln
+}
+
+// 2. Listar Imagenes
+void listarImagenes() {
+
+}
+
+// 3. Aplicar Brillo
+void aplicarBrillo() {
+
+}
+
+// 4. Mostrar Propiedades 
+void mostrarPropiedades() {
+
+}
+
+void menu() {
+    int opcion;
+    bool resp = true;
+    while (resp) {
+        cout << "------ Menu ------" << endl;
+        cout << "1. Crear Imagen" << endl;
+        cout << "2. Listar Imagenes" << endl;
+        cout << "3. Aplicar Brillo" << endl;
+        cout << "4. Mostrar Propiedades" << endl;
+        cout << "5. Salir." << endl;
+        cout << "Ingrese la opcion que desea realizar: ";
+        cin >> opcion;
+        switch (opcion) {
+        case 1:
+
+            break;
+        case 2:
+
+            break;
+        case 3:
+
+            break;
+        case 4:
+
+            break;
+        case 5:
+            cout << "Saliendo..." << endl;
+            resp = false;
+            break;
+        default:
+            cout << "Opcion invalida" << endl;
+            break;
+        }
+    }
+}
+
+int main() {
+    menu();
+}
