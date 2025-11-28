@@ -34,7 +34,7 @@ void crearImagenColor() {
     cout << "Cantidad de Colores a Agregar: ";
     cin >> cantidad;
     if (cantidad <= 0) {
-        cout << "Error: La cantidad de colores debe ser mayor a 0\n";
+        cout << "Error: La cantidad de colores debe ser mayor a 0" << endl;
         return;
     }
     ImagenColor* nuevaImagen = new ImagenColor(nombre, ancho, altura, profundidad);
@@ -110,7 +110,7 @@ void ListarImagenes() {
 
     cout << "Imagenes Guardadas ---"; cout << endl;
     for (int i = 0; i < imagenes.size(); i++) {
-        cout << "--- Posicion " << i << " ---\n";
+        cout << "-> Posicion " << i << " ---\n";
         imagenes[i]->listarAtributos();
     }
     cout << endl;
@@ -119,8 +119,24 @@ void ListarImagenes() {
 // 3. Aplicar Brillo
 void AplicarBrillo() {
     if (imagenes.empty()) {
-        cout << "No hay imagenes para aplicar brillo";
+        cout << "No hay imagenes para aplicar brillo"; cout << endl;
         return;
+    }
+    ListarImagenes();
+    int posicion, brillo;
+    cout << "Ingrese la posicion de la imagen a la que desea aplicar brillo: ";
+    cin >> posicion;
+
+    if (posicion < 0 || posicion >= imagenes.size()) {
+        cout << "Posicion invalida";
+        return;
+    }
+    cout << "Ingrese el valor de brillo a aplicar (10-40): ";
+    cin >> brillo;
+
+    bool exito = imagenes[posicion]->aplicarBrillo(brillo);
+    if (!exito) {
+        cout << "Hubo un error al aplicar el brillo" << endl;
     }
 }
 
@@ -146,23 +162,25 @@ void menu() {
             crearImagen();
             break;
         case 2:
-
+            ListarImagenes();
             break;
         case 3:
-
+            AplicarBrillo();
             break;
         case 4:
-
+            mostrarPropiedades();
             break;
         case 5:
             cout << "Saliendo..." << endl;
             resp = false;
+            liberarMemoria();
             break;
         default:
             cout << "Opcion invalida" << endl;
             break;
         }
     }
+    liberarMemoria();
 }
 
 int main() {
