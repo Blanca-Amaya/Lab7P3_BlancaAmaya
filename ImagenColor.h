@@ -14,8 +14,8 @@ public:
 	// Constructor
 	ImagenColor(string nombre_, int ancho_, int altura_, int profundidad_);
 	~ImagenColor();
-	void aplicarBrillo(); 
 	void calcularPropiedad();
+	void agregarRGB(RGB* rgb);
 	bool aplicarBrillo(int brillo) override;
 	void mostrarPropiedades() override;
 	void listarAtributos() override;

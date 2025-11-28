@@ -128,3 +128,7 @@ void ImagenColor::listarAtributos() {
     }
     cout << endl;
 }
+
+int ImagenColor::getProfundidadColor() {
+    return profundidadColor;
+}

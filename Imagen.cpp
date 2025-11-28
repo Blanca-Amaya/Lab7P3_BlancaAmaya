@@ -1,27 +1,14 @@
 #include "Imagen.h"
 #include <iostream>
 
-Imagen::Imagen(string nombre_, int ancho_, int altura_) {
+Imagen::Imagen(string nombre_, int ancho_, int altura_) : nombre(nombre_), ancho(1), altura(1), pixeles(1) {
 	pixeles = ancho * altura;
-	if (ancho_ < 1) {
-		ancho = 1;
-	}
-	else if (ancho_ > 10) {
-		ancho = 10;
-	}
-	else {
-		ancho = ancho_;
-	}
-	if (altura_ < 1) {
-		altura = 1;
-	}
-	else if (altura_ > 10) {
-		altura = 10;
-	}
-	else {
-		altura = altura_;
-	}
-	pixeles = ancho * altura;
+	if (ancho_ < 1) ancho = 1;
+	else if (ancho_ > 10) ancho = 10;
+	else ancho = ancho_;
+	if (altura_ < 1) altura = 1;
+	else if (altura_ > 10) altura = 10;
+	else altura = altura_;
 }
 
 Imagen::~Imagen() {}

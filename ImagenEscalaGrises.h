@@ -10,16 +10,16 @@ private:
 	vector <int> vectorIntensidad;
 
 public:
-	// Constructor
-	ImagenEscalaGrises(const string& nombre, int ancho, int altura, int contraste);
-	~ImagenEscalaGrises();
-	ImagenEscalaGrises(int contraste2);
+    // Contructor
+    ImagenEscalaGrises(const string& nombre, int ancho, int altura, int contraste);
+    ~ImagenEscalaGrises();
 
-	// Metodos
-	void aplicarBrillo();
-	void calcularPropiedades();
+    // Metodos
+    bool aplicarBrillo(int brillo) override;
+    void mostrarPropiedades() override;
+    void listarAtributos() override;
 
-	// Getters y Setters
-	int getContraste();
+    int getContraste();
+    void generarIntensidadesAleatorias();
 };
 
