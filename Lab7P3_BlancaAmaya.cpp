@@ -15,7 +15,7 @@ void liberarMemoria() {
     for (int i = 0; i < imagenes.size(); i++) {
         delete imagenes[i];
     }
-    imagenes.clear();
+    imagenes.clear()
 }
 
 

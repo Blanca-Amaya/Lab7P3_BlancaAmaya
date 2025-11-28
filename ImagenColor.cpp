@@ -68,9 +68,7 @@ void ImagenColor::mostrarPropiedades() {
             to_string(vectorRGB[i]->getB());
         // -- comparar con los otros colores
         for (int j = i + 1; j < vectorRGB.size(); j++) {
-            string colorComparar = to_string(vectorRGB[j]->getR()) + "," +
-                to_string(vectorRGB[j]->getG()) + "," +
-                to_string(vectorRGB[j]->getB());
+            string colorComparar = to_string(vectorRGB[j]->getR()) + "," + to_string(vectorRGB[j]->getG()) + "," + to_string(vectorRGB[j]->getB());
             if (colorActual == colorComparar) {
                 frecuenciaActual++;
             }
@@ -86,19 +84,17 @@ void ImagenColor::mostrarPropiedades() {
     vector<string> coloresVistos;
 
     for (int i = 0; i < vectorRGB.size(); i++) {
-        string colorActual = to_string(vectorRGB[i]->getR()) + "," +
-            to_string(vectorRGB[i]->getG()) + "," +
-            to_string(vectorRGB[i]->getB());
+        string colorActual = to_string(vectorRGB[i]->getR()) + "," + to_string(vectorRGB[i]->getG()) + "," + to_string(vectorRGB[i]->getB());
 
-        bool yaVisto = false;
+        bool visto = false;
         for (int j = 0; j < coloresVistos.size(); j++) {
             if (coloresVistos[j] == colorActual) {
-                yaVisto = true;
+                visto = true;
                 break;
             }
         }
 
-        if (!yaVisto) {
+        if (!visto) {
             coloresVistos.push_back(colorActual);
             coloresUnicos++;
         }
@@ -120,10 +116,7 @@ void ImagenColor::listarAtributos() {
     else {
         cout << "Colores (" << vectorRGB.size() << "):\n";
         for (int i = 0; i < vectorRGB.size(); i++) {
-            cout << "  RGB " << i << ": ("
-                << vectorRGB[i]->getR() << ", "
-                << vectorRGB[i]->getG() << ", "
-                << vectorRGB[i]->getB() << ")\n";
+            cout << "  RGB " << i << ": (" << vectorRGB[i]->getR() << ", " << vectorRGB[i]->getG() << ", " << vectorRGB[i]->getB() << ")\n";
         }
     }
     cout << endl;
